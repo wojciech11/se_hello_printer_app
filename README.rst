@@ -17,7 +17,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   :: 
 
-  	# jako zwykły program
+    # jako zwykły program
     python main.py
 
     # albo:
@@ -29,7 +29,6 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
     PYTHONPATH=. py.test
     PYTHONPATH=. py.test  --verbose -s
-
 
 - Kontynuując pracę z projektem, aktywowanie hermetycznego środowiska dla aplikacji py:
 
@@ -77,9 +76,6 @@ Pomocnicze
     yum makecache fast
     yum install docker-ce
     systemctl start docker
-
-
-
 
 Materiały
 =========
