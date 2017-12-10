@@ -4,7 +4,6 @@ from formater import SUPPORTED, PLAIN
 from flask import request
 
 moje_imie = "Agnieszka"
-nazwisko = "Rytwinska"
 msg = "Hello World!"
 
 
@@ -14,7 +13,7 @@ def index():
     output = request.args.get('output')
     if not output:
         output = PLAIN
-    return get_formatted(msg, moje_imie, nazwisko,
+    return get_formatted(msg, moje_imie,
                          output.lower())
 
 
