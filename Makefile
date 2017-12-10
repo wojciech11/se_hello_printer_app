@@ -13,3 +13,7 @@ test:
 
 run:
 	python main.py
+
+docker_build:
+		docker build -t hello-world-printer .
+		
