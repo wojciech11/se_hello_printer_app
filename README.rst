@@ -4,6 +4,17 @@ Simple Flask App
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć 
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
+Najpierw trzeba znaleźć się na poziomie swojego folderu użytkownika (karolinabe) i folderu se_hello_printer_app. Aby to zrobić:
+
+	pwd   -> sprawdza, w którym miejscu drzewa katalogów jesteś. Jeśli w nieodpowiednim to:
+	cd Pulpit
+	cd karolinabe
+	cd se_hello_printer_app
+
+
+
+	cat .git/config    -> ???
+
 - Rozpocząnając pracę z projektem (wykorzystując virtualenv). Hermetyczne środowisko dla pojedyńczej aplikacji w python-ie:
 
   ::
