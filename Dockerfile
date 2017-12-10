@@ -9,5 +9,5 @@ ADD hello_world/ /usr/src/hello-world-printer/hello_world/
 ADD main.py /usr/src/hello-world-printer/
 RUN ls /usr/src/hello-world-printer
 
-CMD PYTHONPATH=$PYTHONPATH:/ust/src/hello-world-printer \
+CMD PYTHONPATH=$PYTHONPATH:/usr/src/hello-world-printer \
     FLASK_APP=hello_world flask run --host=0.0.0.0
