@@ -7,33 +7,33 @@ JSON = "json"
 SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON]
 
 
-def get_formatted(msg, imie, nazwisko, format):
+def get_formatted(msg, imie, format):
     result = ""
     if format == PLAIN:
-        result = plain_text(msg, imie, nazwisko)
+        result = plain_text(msg, imie)
     elif format == PLAIN_UP:
-        result = plain_text_upper_case(msg, imie, nazwisko)
+        result = plain_text_upper_case(msg, imie)
     elif format == PLAIN_LO:
-        result = plain_text_lower_case(msg, imie, nazwisko)
+        result = plain_text_lower_case(msg, imie)
     elif format == JSON:
-        result = format_to_json(msg, imie, nazwisko)
+        result = format_to_json(msg, imie)
     return result
 
 
-def format_to_json(msg, imie, nazwisko):
-    return ('{ "imie":"' + imie + '", "nazwisko":"' + nazwisko + '", "mgs":' +
+def format_to_json(msg, imie):
+    return ('{ "imie":"' + imie + '", + '", "mgs":' +
             msg + '"}')
 
 
 
 
-def plain_text(msg, imie, nazwisko):
-    return imie + ' ' + nazwisko +' '+ msg
+def plain_text(msg, imie):
+    return imie + ' ' + msg
 
 
-def plain_text_upper_case(msg, imie, nazwisko):
-    return plain_text(msg.upper(), imie.upper(), nazwisko.upper())
+def plain_text_upper_case(msg, imie):
+    return plain_text(msg.upper(), imie.upper())
 
 
-def plain_text_lower_case(msg, imie, nazwisko):
-    return plain_text(msg.lower(), imie.lower(), nazwisko.lower())
+def plain_text_lower_case(msg, imie):
+    return plain_text(msg.lower(), imie.lower())
