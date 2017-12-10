@@ -6,7 +6,7 @@ install:
 script:
   - make test
 after_success:
-  - make docker_build
-  - make docker_push
+  - sudo make docker_build
+  - sudo make docker_push
 services:
   - docker
