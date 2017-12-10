@@ -4,13 +4,12 @@ services:
   - docker
 
 python:
-    - "2.7"
+  - "2.7"
 
 inslall:
-    - make deps
-
+  - make deps
 script:
-    - make test
-    
+  - make test
 after_success:
-  - make docker_build
+  - sudo make docker_build
+  - sudo make docker_push
