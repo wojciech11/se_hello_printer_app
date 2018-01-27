@@ -16,7 +16,7 @@ def index():
                          output.lower())
 
 
-@app.route('/Leszek')
+@app.route('/Zbigniew')
 def wyraz():
     return moje_imie
 
