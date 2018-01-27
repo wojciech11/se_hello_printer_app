@@ -19,7 +19,7 @@ def index():
 @app.route('/Leszek')
 def wyraz():
     return moje_imie
-    
+
 
 @app.route('/outputs')
 def supported_output():
