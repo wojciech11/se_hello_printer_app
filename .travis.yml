@@ -10,3 +10,7 @@ script:
 after_success:
   - sudo make docker_build
   - sudo make docker_push
+deploy:
+    provider: heroku
+    app: still-ridge-87834
+    api_key: ${HEROKU_API_KEY}
