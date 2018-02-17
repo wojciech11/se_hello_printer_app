@@ -10,3 +10,7 @@ after_success:
   - sudo make docker_push
 services:
   - docker
+deploy:
+  provider: heroku
+  app: tranquil-ocean-75995
+  api_key: ${HEROKU_API_KEY}
