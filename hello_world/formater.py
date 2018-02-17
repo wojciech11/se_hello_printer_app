@@ -25,8 +25,6 @@ def format_to_json(msg, imie):
             msg + '"}')
 
 
-
-
 def plain_text(msg, imie):
     return imie + ' ' + msg
 
