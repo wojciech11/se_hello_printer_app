@@ -1,7 +1,7 @@
 Simple Flask App
 ================
 
-Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć 
+Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 Najpierw trzeba znaleźć się na poziomie swojego folderu użytkownika (karolinabe) i folderu se_hello_printer_app. Aby to zrobić:
@@ -26,7 +26,7 @@ Najpierw trzeba znaleźć się na poziomie swojego folderu użytkownika (karolin
 
 - Uruchamianie applikacji:
 
-  :: 
+  ::
 
     # jako zwykły program
     python main.py
@@ -67,10 +67,10 @@ Pomocnicze
     pip install -U pip
     pip install virtualenv
     pip install virtualenvwrapper
-  
+
 - Instalacja docker-a:
 
-  :: 
+  ::
 
     yum remove docker \
         docker-common \
@@ -92,3 +92,32 @@ Materiały
 =========
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
+
+
+Ponowne uruchamianie na innym komputerze:
+==========================================
+
+#tworzenie nowego folderu dla repozytorium i wejście do niego
+mkdir ~/nazwa uzytkownika/   #moja nazwa to karolinabe
+cd ~/nazwa użytkownika
+
+# konfiguracja gita
+git config -l   #sprawdza jaka jest obecna konfiguracja, jeśli nieopowiednia, to konfigurujemy dalej
+git config --global user.email "karolinabe@users.noreply.github.com"
+git config --global user.name "karolinabe"
+# git config --global core.editor "atom"  #ewentualnie, o ile ustawiony jest inny program
+
+git clone link do repozytorium z githuba  #najlepiej go skopiować tak: wchodzimy do repo na github i klikamy "clone or download", tam pojawi się link
+
+#ponownie kopiujemy biblioteki z linków powyżej, czyli:
+
+source /usr/bin/virtualenvwrapper.sh
+mkvirtualenv wsb-simple-flask-app
+pip install -r requirements.txt
+pip install -r test_requirements.txt
+
+#teraz możemy spróbować odpalić program i testy, tak jak napisano wyżej, albo za pomocą poleceń:
+
+make run
+make test
+make lint
