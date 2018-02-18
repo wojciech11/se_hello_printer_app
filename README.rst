@@ -1,8 +1,9 @@
 Simple Flask App
 ================
 
-Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć 
+Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
+
 
 - Rozpocząnając pracę z projektem (wykorzystując virtualenv). Hermetyczne środowisko dla pojedyńczej aplikacji w python-ie:
 
@@ -13,9 +14,12 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
     pip install -r requirements.txt
     pip install -r test_requirements.txt
 
+Najpierw uruchomic srodowisko wirtualne
+
+
 - Uruchamianie applikacji:
 
-  :: 
+  ::
 
     # jako zwykły program
     python main.py
@@ -38,12 +42,21 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
     workon wsb-simple-flask-app
 
 
-- Integracja z TravisCI:
+- Integracja z TravisCI
 
-  ::
+.. image:: https://travis-ci.org/katarzynasycz/se_hello_printer_app.svg?branch=master
+    :target: https://travis-ci.org/katarzynasycz/se_hello_printer_app
 
-    ...
 
+- Integracja z heroku:
+
+  https://tranquil-ocean-75995.herokuapp.com/
+
+
+- Monitoring
+
+.. image:: https://app.statuscake.com/button/index.php?Track=FeAoV4rVyi&Days=1&Design=1
+    :target: https://www.statuscake.com
 
 Pomocnicze
 ==========
@@ -56,10 +69,10 @@ Pomocnicze
     pip install -U pip
     pip install virtualenv
     pip install virtualenvwrapper
-  
+
 - Instalacja docker-a:
 
-  :: 
+  ::
 
     yum remove docker \
         docker-common \

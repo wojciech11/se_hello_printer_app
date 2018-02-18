@@ -1,0 +1,18 @@
+language: python
+python:
+  - "2.7"
+install:
+  - make deps
+script:
+  - make lint
+  - make test_xunit
+  - make test_cov
+after_success:
+  - sudo make docker_build
+  - sudo make docker_push
+services:
+  - docker
+deploy:
+  provider: heroku
+  app: tranquil-ocean-75995
+  api_key: ${HEROKU_API_KEY}
