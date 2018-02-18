@@ -56,8 +56,10 @@ https://tranquil-ocean-75995.herokuapp.com/
 Monitoring:
 
 Statuscake
+
 .. image::
 https://app.statuscake.com/button/index.php?Track=FeAoV4rVyi&Days=1&Design=1
+    :target: https://www.statuscake.com
 
 
 Pomocnicze
