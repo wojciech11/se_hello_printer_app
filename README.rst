@@ -47,6 +47,7 @@ Najpierw uruchomic srodowisko wirtualne
 .. image:: https://travis-ci.org/katarzynasycz/se_hello_printer_app.svg?branch=master
     :target: https://travis-ci.org/katarzynasycz/se_hello_printer_app
 
+
 - Integracja z heroku:
 
   https://tranquil-ocean-75995.herokuapp.com/
