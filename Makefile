@@ -12,6 +12,12 @@ lint:
 test:
 	PYTHONPATH=. py.test  --verbose -s
 
+test_cov:
+	PYTHONPATH=. py.test --verbose -s --cov=.
+
+test_xunit:
+	PYTHONPATH=. py.test -s --cov=. --junit-xml=test_results.xml
+
 test_smoke:
 	curl -I --fail 127.0.0.1:5000
 
@@ -35,7 +41,3 @@ docker_push: docker_build
 			docker tag hello-world-printer $(TAG); \
 			docker push $(TAG); \
 			docker logout;
-
-test_cov:
-
-test_xunit:
