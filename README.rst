@@ -48,7 +48,6 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 .. image:: https://travis-ci.org/akola2017/se_hello_printer_app.svg?branch=master
     :target: https://travis-ci.org/akola2017/se_hello_printer_app
 
-    ...
 
 - Monitoring
 
