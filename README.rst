@@ -56,7 +56,8 @@ https://tranquil-ocean-75995.herokuapp.com/
 Monitoring:
 
 Statuscake
-<a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=FeAoV4rVyi&Days=1&Design=1" /></a>
+.. image::
+https://app.statuscake.com/button/index.php?Track=FeAoV4rVyi&Days=1&Design=1
 
 
 Pomocnicze
