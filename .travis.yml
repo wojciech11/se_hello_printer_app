@@ -4,7 +4,9 @@ python:
 install:
   - make deps
 script:
-  - make test
+  - make lint
+  - make test_xunit
+  - make test_cov
 after_success:
   - sudo make docker_build
   - sudo make docker_push

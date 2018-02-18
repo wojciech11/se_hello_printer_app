@@ -14,6 +14,11 @@ lint:
 test:
 	PYTHONPATH=. py.test  --verbose -s
 
+test_cov:
+
+test_xunit:
+
+
 test_smoke:
 	curl -I --fail 127.0.0.1:5000
 
