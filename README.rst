@@ -42,7 +42,10 @@ Najpierw uruchomic srodowisko wirtualne
     workon wsb-simple-flask-app
 
 
-- Integracja z TravisCI:
+- Integracja z TravisCI
+
+.. image:: https://travis-ci.org/katarzynasycz/se_hello_printer_app.svg?branch=master
+    :target: https://travis-ci.org/katarzynasycz/se_hello_printer_app
 
   ::
 
