@@ -15,10 +15,11 @@ test:
 	PYTHONPATH=. py.test  --verbose -s
 
 test_cov:
+	PYTHON= py.test --verbose -s --cov=.
 
 test_xunit:
-
-
+ 	PYTHON= py.test --verbose -s --cov=. --junit-xml=test_results.xml
+	
 test_smoke:
 	curl -I --fail 127.0.0.1:5000
 
