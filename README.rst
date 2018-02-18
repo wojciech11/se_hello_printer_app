@@ -51,8 +51,8 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 - Monitoring
 
-.. image:: https://app.statuscake.com/button/index.php?Track=H8TqVm3r7m&Days=1&Design=1"
-
+.. image:: https://app.statuscake.com/button/index.php?Track=H8TqVm3r7m&Days=1&Design=1
+      :target: https://www.statuscake.com
 
 - Integracja z HEROKU
     https://still-ridge-87834.herokuapp.com/
