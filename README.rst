@@ -51,16 +51,10 @@ Najpierw uruchomic srodowisko wirtualne
 https://tranquil-ocean-75995.herokuapp.com/
     ...
 
-  ::
+Monitoring
 
-Monitoring:
-
-Statuscake
-
-.. image::
-https://app.statuscake.com/button/index.php?Track=FeAoV4rVyi&Days=1&Design=1
+.. image:: https://app.statuscake.com/button/index.php?Track=FeAoV4rVyi&Days=1&Design=1
     :target: https://www.statuscake.com
-
 
 Pomocnicze
 ==========
