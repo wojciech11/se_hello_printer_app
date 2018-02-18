@@ -15,8 +15,8 @@ test:
 test_smoke:
 	curl -I --fail 127.0.0.1:5000
 
-#run:
-#python main.py
+run:
+	python main.py
 
 docker_build:
 	docker build -t $(MY_DOCKER_NAME) .
