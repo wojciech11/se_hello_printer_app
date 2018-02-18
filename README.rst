@@ -48,7 +48,12 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ::
 
     ...
+
 - Monitoring
+
+.. image:: https://app.statuscake.com/button/index.php?Track=H8TqVm3r7m&Days=1&Design=1"
+
+
     monitoring strony na https://app.statuscake.com
     <a href="https://www.statuscake.com" title="Website Uptime Monitoring">
     <img src="https://app.statuscake.com/button/index.php?Track=H8TqVm3r7m&Days=1&Design=1" /></a>
