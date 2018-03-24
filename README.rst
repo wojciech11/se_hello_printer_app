@@ -52,7 +52,7 @@ Pomocnicze
 
   ::
 
-    yum install python-pip
+    yum install -y python-pip
     pip install -U pip
     pip install virtualenv
     pip install virtualenvwrapper
@@ -74,7 +74,7 @@ Pomocnicze
       https://download.docker.com/linux/centos/docker-ce.repo
 
     yum makecache fast
-    yum install docker-ce
+    yum install -y docker-ce
     systemctl start docker
 
 Materiały
