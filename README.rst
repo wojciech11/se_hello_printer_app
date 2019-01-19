@@ -8,7 +8,6 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   ::
 
-    source /usr/bin/virtualenvwrapper.sh # do ~/.bashrc
     # centos, add to ~/.bashrc
     source /usr/bin/virtualenvwrapper.sh
     
