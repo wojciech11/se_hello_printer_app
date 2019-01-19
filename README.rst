@@ -10,12 +10,23 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
     source /usr/local/bin/virtualenvwrapper.sh # do ~/.bashrc
     mkvirtualenv wsb-simple-flask-app
+    
+    można użyć:
+    
     pip install -r requirements.txt
     pip install -r test_requirements.txt
+    
+    lub też:
+    
+    make deps
+   
 
 - Uruchamianie applikacji:
 
   :: 
+    make run
+    
+    lub:
 
     # jako zwykły program
     python main.py
@@ -26,9 +37,16 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 - Uruchamianie testów (see: http://doc.pytest.org/en/latest/capture.html):
 
   ::
+    make test
+    
+    lub:
 
     PYTHONPATH=. py.test
     PYTHONPATH=. py.test  --verbose -s
+    
+    dodatkowo:
+    
+    make lint
 
 - Kontynuując pracę z projektem, aktywowanie hermetycznego środowiska dla aplikacji py:
 
