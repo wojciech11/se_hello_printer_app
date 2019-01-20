@@ -8,4 +8,4 @@ install:
 script:
   - make lint
   - make test
-  - make docker-build
+  - make docker_build
