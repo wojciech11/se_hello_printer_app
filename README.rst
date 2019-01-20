@@ -8,7 +8,12 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   ::
 
-    source /usr/local/bin/virtualenvwrapper.sh # do ~/.bashrc
+    # centos, add to ~/.bashrc
+    source /usr/bin/virtualenvwrapper.sh
+    
+    # ubuntu, add to ~/.bashrc
+    source /usr/local/bin/virtualenvwrapper.sh
+
     mkvirtualenv wsb-simple-flask-app
     
     można użyć:
@@ -65,6 +70,20 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 Pomocnicze
 ==========
+
+Ubuntu
+------
+
+- Instalacja python virtualenv i virtualenvwrapper:
+
+  ::
+
+    sudo su
+    pip install virtualenv
+    pip install virtualenvwrapper
+
+Centos
+------
 
 - Instalacja python virtualenv i virtualenvwrapper:
 
