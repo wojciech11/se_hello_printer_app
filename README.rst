@@ -68,6 +68,8 @@ Ubuntu
     $ pip install virtualenv
     $ pip install virtualenvwrapper
 
+- Instalacja dockera: `dockerce howto <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_
+
 Centos
 ------
 
