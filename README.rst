@@ -18,6 +18,8 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
     $ pip install -r requirements.txt
     $ pip install -r test_requirements.txt
 
+  Sprawdź: `documentację virtualenvwrappera <https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html>`_.
+
 - Uruchamianie applikacji:
 
   :: 
