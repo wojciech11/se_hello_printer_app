@@ -41,6 +41,8 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
     $ source /usr/local/bin/virtualenvwrapper.sh # nie trzeba, jeśli już w .bashrc
     $ workon wsb-simple-flask-app
+    
+    ...
 
     # deaktywacja virtualenv
     $ deactivate
