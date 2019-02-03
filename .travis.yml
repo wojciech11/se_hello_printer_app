@@ -9,5 +9,5 @@ install:
 script:
   - make lint
   - make test
-after_succes:
+after_script:
   - make docker_build
