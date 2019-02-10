@@ -66,9 +66,8 @@ Ubuntu
 
   ::
 
-    $ sudo su
-    $ pip install virtualenv
-    $ pip install virtualenvwrapper
+    $ sudo pip install virtualenv
+    $ sudo pip install virtualenvwrapper
 
 - Instalacja dockera: `dockerce howto <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_
 
