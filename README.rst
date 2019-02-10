@@ -14,6 +14,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
     # ubuntu, add to ~/.bashrc
     $ source /usr/local/bin/virtualenvwrapper.sh
 
+    # tworzymy hermetyczne środowisko dla bibliotek aplikacji:
     $ mkvirtualenv wsb-simple-flask-app
     $ pip install -r requirements.txt
     $ pip install -r test_requirements.txt
