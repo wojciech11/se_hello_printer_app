@@ -6,6 +6,6 @@ install:
 service:
    - docker
 script:
-   - make test
    - make lint
-   - make docker build
+   - make test
+   - make docker_build
