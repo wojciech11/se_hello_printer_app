@@ -77,6 +77,12 @@ Pomocnicze
     yum install -y docker-ce
     systemctl start docker
 
+- Travis
+   ::
+	Travis odpali wszystkie skrypty po kolei i zdeployuje apke nawet jezeli testy nie przeszly.
+	Zeby tak nie bylo, trzeba zmienic i dac make deps && make lint, a nie jedno pod drugim
+
+
 Materiały
 =========
 
