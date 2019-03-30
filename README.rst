@@ -113,4 +113,11 @@ Odpalenie
 
 -   komenda make deps
 
+-   sprawdzenie jakosci kodu : make lint
+
+-   odpalenie programu : make run
+
+-   przetestowanie programu : make test
+
+
 
