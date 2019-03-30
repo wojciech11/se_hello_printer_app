@@ -105,6 +105,8 @@ Materiały
 Odpalenie
 =========
 
+::
+
 -   source /usr/local/bin/virtualenvwrapper.sh
 
 -   mkvirtualenv wsb-simple-flask-app
