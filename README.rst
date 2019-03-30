@@ -100,3 +100,17 @@ Materiały
 =========
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
+
+
+Odpalenie
+=========
+
+-   source /usr/local/bin/virtualenvwrapper.sh
+
+-   mkvirtualenv wsb-simple-flask-app
+
+-   przejscie do katalogu se_hello_printer_app
+
+-   komenda make deps
+
+
