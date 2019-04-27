@@ -11,7 +11,7 @@ test:
 		  PYTHONPATH=. py.test  --verbose -s
 
 run:
-	    PYTHONPATH=. FLASK_APP hello_world flask run
+	    PYTHONPATH=. FLASK_APP=hello_world flask run
 
 docker_build:
 	    docker build -t hello-world-printer .
