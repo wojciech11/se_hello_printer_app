@@ -25,7 +25,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   ::
 
-    # jako zwykły program 
+    # jako zwykły program
     $ python main.py
 
     # albo:
@@ -108,3 +108,6 @@ Materiały
 =========
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
+
+.. image:: https://travis-ci.org/KasiaGabrysiak/se_hello_printer_app.svg?branch=master
+    :target: https://travis-ci.org/KasiaGabrysiak/se_hello_printer_app
