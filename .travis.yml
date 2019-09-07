@@ -12,5 +12,5 @@ script:
   - make docker_push
 deploy:
   provider: heroku
-  app: se_hello_printer_app
+  app: serene-spire-33604
   api_key: ${HEROKU_API_KEY}
