@@ -107,3 +107,14 @@ Materiały
 =========
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
+
+Monitoring
+-----------
+Został założony dla https://serene-spire-33604.herokuapp.com/ za pomocą statuscake
+Polega na odpytywaniu co 5min czy strona aplikacji jest dostepna
+
+.. image:: https://travis-ci.org/bartoszstefaniak88/se_hello_printer_app.svg?branch=master
+    :target: https://travis-ci.org/bartoszstefaniak88/se_hello_printer_app
+
+.. image:: https://www.statuscake.com
+    :target: https://app.statuscake.com/button/index.php?Track=qNzob3GCif&Days=1&Design=7
