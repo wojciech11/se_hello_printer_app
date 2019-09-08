@@ -7,7 +7,8 @@ test:
   image: "python:2.7"
   stage: test
   script:
-    - PYTHONPATH=. py.test --verbose -s
+    - make test
+    - make lint
 
 docker:
   image: docker:stable
