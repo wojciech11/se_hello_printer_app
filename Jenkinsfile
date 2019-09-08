@@ -27,8 +27,7 @@ pipeline {
         	}
         }
     }
-}
-post{
+ post{
     always{
         cobertura autoUpdateHealth: false,
                   autoUpdateStability: false,
