@@ -2,6 +2,8 @@ import unittest
 import json
 from hello_world import app
 from hello_world.formater import SUPPORTED
+from dicttoxml import dicttoxml
+import xmltodict
 
 
 XML_EXP = "<greetings><name>Natalia</name><msg>Hello World!</msg></greetings>"
@@ -25,8 +27,15 @@ class FlaskrTestCase(unittest.TestCase):
         self.assertEqual(expected["msg"], js["msg"])
 
     def test_msg_with_xml_output(self):
-        rv = self.app.get('/?output=xml')
-        self.assertEquals(XML_EXP, rv.data)
+        imie = "Natalia"
+        exp = {"imie": imie, "msg": "Hello World!"}
+#        xml = xmltodict.parse(exp)
+#        print(xml)
+        rv = self.app.get('/?output=xml&imie' + imie)
+        xml_create = dicttoxml(exp)
+        print(xml_create)
+        self.assertEquals(exp["imie"], xml_create[9])
+        self.assertEquals(exp["msg"], xml_create[1])
 
     def test_msg_with_output_name(self):
         imie = 'Bartosz'
