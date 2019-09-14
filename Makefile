@@ -7,7 +7,7 @@ lint:
 			flake8 hello_world test
 
 test:
-			PYTHONPATH=. py.test
+			PYTHONPATH=. py.test -s
 
 
 run:
