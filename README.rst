@@ -1,16 +1,15 @@
 Simple Flask App
 ================
 
-Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć 
+Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 - Rozpocząnając pracę z projektem (wykorzystując virtualenv). Hermetyczne środowisko dla pojedyńczej aplikacji w python-ie:
 
   ::
 
-    # centos, add to ~/.bashrc
     $ source /usr/bin/virtualenvwrapper.sh
-    
+
     # ubuntu, add to ~/.bashrc
     $ source /usr/local/bin/virtualenvwrapper.sh
 
@@ -23,7 +22,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 - Uruchamianie applikacji:
 
-  :: 
+  ::
 
     # jako zwykły program
     $ python main.py
@@ -44,7 +43,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
     $ source /usr/local/bin/virtualenvwrapper.sh # nie trzeba, jeśli już w .bashrc
     $ workon wsb-simple-flask-app
-    
+
     ...
 
     # deaktywacja virtualenv
@@ -83,10 +82,10 @@ Centos
     $ pip install -U pip
     $ pip install virtualenv
     $ pip install virtualenvwrapper
-  
+
 - Instalacja docker-a:
 
-  :: 
+  ::
 
     $ yum remove docker \
         docker-common \
@@ -108,3 +107,13 @@ Materiały
 =========
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
+
+Monitoring
+-----------
+Został założony dla https://serene-spire-33604.herokuapp.com/ za pomocą statuscake
+Polega na odpytywaniu co 5min czy strona aplikacji jest dostepna
+
+.. image:: https://travis-ci.org/bartoszstefaniak88/se_hello_printer_app.svg?branch=master
+    :target: https://travis-ci.org/bartoszstefaniak88/se_hello_printer_app
+
+.. image:: https://app.statuscake.com/button/index.php?Track=qNzob3GCif&Days=1&Design=7

@@ -1,0 +1,17 @@
+language: python
+services:
+  - docker
+python:
+  - "2.7"
+install:
+  - make deps
+script:
+  - make lint
+  - make test
+  - make docker_build
+  - make docker_push
+  - make test_xunit
+deploy:
+  provider: heroku
+  app: serene-spire-33604
+  api_key: ${HEROKU_API_KEY}
