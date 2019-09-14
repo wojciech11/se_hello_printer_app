@@ -2,7 +2,7 @@ import unittest
 from hello_world import app
 from hello_world.formater import SUPPORTED
 
-XML_EXP = "<greetings><name>Ula</name><msg>Hello World!</msg></greetings>"
+XML_EXP = "<greetings><name>Natalia</name><msg>Hello World!</msg></greetings>"
 
 
 class FlaskrTestCase(unittest.TestCase):
@@ -16,7 +16,7 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_msg_with_output(self):
         rv = self.app.get('/?output=json')
-        self.assertEquals('{"imie": "Ula", "msg": "Hello World!"}',
+        self.assertEquals('{"imie": "Natalia", "msg": "Hello World!"}',
                           rv.data)
 
     def test_msg_with_xml_output(self):

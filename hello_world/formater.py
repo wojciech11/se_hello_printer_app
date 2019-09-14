@@ -42,6 +42,8 @@ def format_to_xml(msg, imie):
     root = etree.Element('greetings')
     a = etree.SubElement(root, 'name')
     a.text = 'Natalia'
+    elem_msg = etree.SubElement(root,'msg')
+    elem_msg.text = msg
     return tostring(root)
 
 
