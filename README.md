@@ -52,7 +52,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 - Integracja z TravisCI:
 
   ```
-  # miejsce na twoje notatkiss
+  # miejsce na twoje notatki
   ```
 
 
@@ -67,7 +67,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ sudo pip install virtualenvwrapper
   ```
 
-- Instalacja dockera: `dockerce howto <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_
+- Instalacja dockera: [dockerce howto](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ## Centos
 
