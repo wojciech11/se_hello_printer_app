@@ -16,7 +16,7 @@ docker_build:
 	docker build -t hello-world-printer .
 
 
-USERNAME=wsbtester1
+USERNAME=pawlos321
 TAG=$(USERNAME)/hello-world-printer
 
 docker_push: docker_build
