@@ -6,7 +6,7 @@ deps:
 test:
 	PYTHONPATH=. py.test --verbose -s
 
-link:
+lint:
 	flake8 hello_world test
 
 run:
