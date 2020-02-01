@@ -3,7 +3,6 @@ python:
   - "2.7"
 install:
   - make deps
-lint:
-  - make lint
 script:
+  - make lint
   - make test
