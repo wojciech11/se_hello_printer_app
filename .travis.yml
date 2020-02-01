@@ -1,8 +1,12 @@
 language: python
 python:
   - "2.7"
+services:
+  - docker
 install:
   - make deps
 script:
   - make lint
   - make test
+after_success:
+  - make docker_build
