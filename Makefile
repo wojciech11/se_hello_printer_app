@@ -31,3 +31,6 @@ docker_push: docker_build
 	docker tag hello-world-printer $(TAG); \
 	docker push $(TAG); \
 	docker logout;
+
+test_smoke:
+	curl --fail 127.0.0.1:5000
