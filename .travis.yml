@@ -1,4 +1,6 @@
 language: python
+services:
+  - docker
 python:
   - "2.7"
 install:
@@ -6,3 +8,5 @@ install:
 script:
   - make test
   - make lint
+after_success:
+  - make docker_build
