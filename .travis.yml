@@ -1,10 +1,10 @@
-.travis.yml
+
 language: python
-python:
-  - "2.7"
-  install:
-    - make deps
-make script:
-  - make test
 services:
   - docker
+python:
+  - "2.7"
+install:
+  - make deps
+make script:
+  - make test
