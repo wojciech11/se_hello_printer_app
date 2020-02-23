@@ -14,19 +14,19 @@ run:
 	PYTHONPATH=. FLASK_APP=hello_world flask run
 
 docker_build:
-	docker build -t hello_world_printer .
+	docker build -t hello-world-printer .
 
 docker_run:
 	docker run \
-	--name hello_world_printer-dev \
+	--name hello-world-printer-dev \
 	-p 5000:5000 \
-	-d hello_world_printer
+	-d hello-world-printer
 
-docker_push:
-	USERNAME=subbler
-	TAG=$(USERNAME)/hello_world_printer
+USERNAME=subbler
+TAG=$(USERNAME)/hello-world-printer
 
-	@docker login --username ${USERNAME} --password $${DOCKER_PASSWORD}; \
-	docker tag hello_world_printer $(TAG); \
+docker_push: docker_build
+	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
+	docker tag hello-world-printer $(TAG); \
 	docker push $(TAG); \
 	docker logout;
