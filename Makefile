@@ -42,5 +42,3 @@ docker_push: docker_build
 	docker tag $(MY_DOCKER_NAME) $(TAG); \
 	docker push $(TAG); \
 	docker logout;
-
-$
