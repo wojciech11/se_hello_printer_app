@@ -1,3 +1,5 @@
+zmianiony plik ReadMe
+
 # Simple Flask App
 
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
