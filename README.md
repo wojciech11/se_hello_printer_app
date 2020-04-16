@@ -3,22 +3,22 @@
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
-- Rozpoczynając pracę z projektem (wykorzystując virtualenv). Hermetyczne środowisko dla pojedynczej aplikacji w python-ie:
+- W projekcie wykorzystamy virtual environment, dla utworzenia hermetycznego środowisko dla aplikacji:
 
   ```
-  # centos, add to ~/.bashrc
-  $ source /usr/bin/virtualenvwrapper.sh
-
-  # ubuntu, add to ~/.bashrc
-  $ source /usr/local/bin/virtualenvwrapper.sh
-
   # tworzymy hermetyczne środowisko dla bibliotek aplikacji:
-  $ mkvirtualenv wsb-simple-flask-app
+  $ python3 -m venv .venv
+
+  # aktywowanie hermetycznego środowiska
+  $ source .venv/bin/activate
   $ pip install -r requirements.txt
   $ pip install -r test_requirements.txt
+
+  # zobacz
+  $ pip list
   ```
 
-  Sprawdź: [documentację virtualenvwrappera](https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html)s oraz [biblioteki flask](http://flask.pocoo.org).
+  Sprawdź: [tutorial venv](https://docs.python.org/3/tutorial/venv.html) oraz [biblioteki flask](http://flask.pocoo.org).
 
 - Uruchamianie applikacji:
 
@@ -34,19 +34,21 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   ```
   $ PYTHONPATH=. py.test
-  $ PYTHONPATH=. py.test  --verbose -s
+  $ PYTHONPATH=. py.test --verbose -s
   ```
 
 - Kontynuując pracę z projektem, aktywowanie hermetycznego środowiska dla aplikacji py:
 
   ```
-  $ source /usr/local/bin/virtualenvwrapper.sh # nie trzeba, jeśli już w .bashrc
-  $ workon wsb-simple-flask-app
+  # deaktywacja
+  $ deactivate
+  ```
 
+  ```
   ...
 
-  # deaktywacja virtualenv
-  $ deactivate
+  # aktywacja 
+  $ source .venv/bin/activate
   ```
 
 - Integracja z TravisCI:
@@ -55,30 +57,13 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   # miejsce na twoje notatki
   ```
 
-
 # Pomocnicze
 
 ## Ubuntu
 
-- Instalacja python virtualenv i virtualenvwrapper:
-
-  ```
-  $ sudo pip install virtualenv
-  $ sudo pip install virtualenvwrapper
-  ```
-
 - Instalacja dockera: [dockerce howto](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ## Centos
-
-- Instalacja python virtualenv i virtualenvwrapper:
-
-  ```
-  $ yum install -y python-pip
-  $ pip install -U pip
-  $ pip install virtualenv
-  $ pip install virtualenvwrapper
-  ```
 
 - Instalacja docker-a:
 
@@ -99,7 +84,3 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ yum install -y docker-ce
   $ systemctl start docker
   ```
-
-# Materiały
-
-- https://virtualenvwrapper.readthedocs.io/en/latest/
