@@ -1,4 +1,4 @@
-FROM python:2.7
+FROM python:3.6
 
 ARG APP_DIR=/usr/src/hello_world_printer
 
