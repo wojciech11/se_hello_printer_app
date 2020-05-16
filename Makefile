@@ -1,4 +1,7 @@
+SERVICE_NAME=hello_world_printer
+DOCKER_IMG_NAME=$(SERVICE_NAME)
 .PHONY: test
+.DEFAULT_GOAL	:= test
 deps:
 	pip install -r requirements.txt; \
 	pip install -r test_requirements.txt
@@ -13,8 +16,15 @@ run:
 	PYTHONPATH=. FLASK_APP=hello_world flask run
 
 docker_build:
-	docker build -t hello-world-printer .
+	docker build -t $(DOCKER_IMG_NAME) .
 
+docker_run: docker_build
+			docker_run \
+						--name $(SERVICE_NAME)-dev \
+						-p 5000:5000 \
+						-d $(DOCKER_IMG_NAME)
+docker_stop:
+			docker stop $(SERVICE_NAME)-dev
 
 USERNAME=pawlos321
 TAG=$(USERNAME)/hello-world-printer
