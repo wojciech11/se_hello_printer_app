@@ -1,10 +1,11 @@
 from hello_world import app
-from hello_world.formater import get_formatted
-from hello_world.formater import SUPPORTED, PLAIN
+from formater import get_formatted
+from formater import SUPPORTED, PLAIN
 from flask import request
 
-moje_imie = "Natalia"
+moje_imie = "Karolina"
 msg = "Hello World!"
+
 
 @app.route('/')
 def index():
@@ -13,6 +14,7 @@ def index():
         output = PLAIN
     return get_formatted(msg, moje_imie,
                          output.lower())
+
 
 @app.route('/outputs')
 def supported_output():

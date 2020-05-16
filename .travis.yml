@@ -1,15 +1,19 @@
 language: python
 python:
-  - "3.6"
+  - "3.6.9"
+services:
+  - docker
+
 install:
   - make deps
+
 script:
   - make test
+  - make lint
+  - make docker_build
+  - make docker_push
 
 deploy:
   provider: heroku
   app: shielded-falls-22933
   api_key: ${HEROKU_API_KEY}
-
-after_success:
-  - make docker_build

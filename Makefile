@@ -1,15 +1,17 @@
-SERVICE_NAME=hello-world-printer
+SERVICE_NAME=hello_world_printer
 DOCKER_IMG_NAME=$(SERVICE_NAME)
 .PHONY: test
 
 
-
-USERNAME='7kaza'
-
+USERNAME=7kaza
+TAG=$(USERNAME)/hello_world_printer
 
 deps:
-	pip install -r requirements.txt
+	pip install -r requirements.txt; \
 	pip install -r test_requirements.txt
+
+test:
+	PYTHONPATH=. py.test  --verbose -s
 
 lint:
 	flake8 hello_world test
@@ -17,23 +19,20 @@ lint:
 run:
 	PYTHONPATH=. FLASK_APP=hello_world flask run
 
-test:
-	PYTHONPATH=. py.test --verbose -s
-
 docker_build:
-	docker build -t hello_world_printer .
+	docker build  -t helo_world_printer .
 
 docker_run: docker_build
-	docker run \
-		--name hello_world_printer-dev \
-	   -p 5000:5000 \
-	   -d hello_world_printer
-
-docker_stop:
-	docker stop hello_world_printer-dev
+		docker run \
+			--name hello_world_printer-dev \
+			-p 5000:5000 \
+			-d hello_world_printer
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
-	docker tag $(DOCKER_IMG_NAME) $(TAG); \
+	docker tag hello_world_printer $(TAG); \
 	docker push $(TAG); \
 	docker logout;
+
+docker_stop:
+	docker stop hello_world_printer-dev
