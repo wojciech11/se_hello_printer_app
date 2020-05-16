@@ -1,4 +1,5 @@
-FROM python:3
+FROM python:3.6.9
+
 ARG APP_DIR=/usr/src/hello_world_printer
 
 WORKDIR /tmp
@@ -9,5 +10,5 @@ RUN mkdir -p $APP_DIR
 ADD hello_world/ $APP_DIR/hello_world/
 ADD main.py $APP_DIR
 
-CMD PYTHONPATH=$PYTHONPATH:/usr/src/hello_world_printer \
-  FLASK_APP=hello_world flask run --host=0.0.0.0
+CMD PYTHONPATH=$PYTHONPATH:/usr/scr/hello_world_printer \
+    FLASK_APP=hello_world flask run --host=0.0.0.0
