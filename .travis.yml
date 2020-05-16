@@ -8,7 +8,7 @@ script:
 
 deploy:
   provider: heroku
-  app: hello_world:app
+  app: hello_world_printer_app
   api_key: ${HEROKU_API_KEY}
 
 after_success:
