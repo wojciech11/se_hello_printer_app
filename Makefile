@@ -1,8 +1,10 @@
 SERVICE_NAME=hello-world-printer
 DOCKER_IMG_NAME=$(SERVICE_NAME)
-.PHONY: test .DEFAULT_GOAL := test
+.PHONY: test
 
-USERNAME = '7kaza'
+
+
+USERNAME='7kaza'
 
 
 deps:
@@ -16,19 +18,19 @@ run:
 	PYTHONPATH=. FLASK_APP=hello_world flask run
 
 test:
-	PYTHONPATH=. py.test
+	PYTHONPATH=. py.test --verbose -s
 
 docker_build:
-  docker build -t $(DOCKER_IMG_NAME)
+	docker build -t hello_world_printer .
 
 docker_run: docker_build
-	docker run
-		--name $(SERVICE_NAME)-dev
-	  -p 5000:5000
-	  -d $(DOCKER_IMG_NAME)
+	docker run \
+		--name hello_world_printer-dev \
+	   -p 5000:5000 \
+	   -d hello_world_printer
 
 docker_stop:
-	docker stop $(SERVICE_NAME)-dev
+	docker stop hello_world_printer-dev
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \

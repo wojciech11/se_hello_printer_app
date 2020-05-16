@@ -1,8 +1,15 @@
 language: python
 python:
-  - "2.7"
+  - "3.6"
 install:
   - make deps
 script:
   - make test
-    
+
+deploy:
+  provider: heroku
+  app: hello_world:app
+  api_key: ${HEROKU_API_KEY}
+
+after_success:
+  - make docker_build
