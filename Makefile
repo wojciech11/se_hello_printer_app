@@ -36,3 +36,10 @@ docker_push: docker_build
 
 docker_stop:
 	docker stop hello_world_printer-dev
+
+test_cov:
+	PYTHONPATH=. py.test --verbose -s --cov=.
+	PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml
+
+ test_xunit:
+ 	PYTHONPATH=. py.test -s --cov=. --cov-report xml --junit-xml=test_results.xml  
