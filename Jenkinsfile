@@ -24,6 +24,8 @@ pipeline {
                                pattern: 'test_results.xml',
                                skipNoTestFiles: false,
                                stopProcessingIfError: true)
-                  ]
+                    ]
+               }
           }
+    }    
 }
