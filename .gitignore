@@ -2,5 +2,4 @@
 .cache
 .venv/
 test_results.xml
-coverage.xml
 .coverage. 
