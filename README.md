@@ -8,7 +8,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 TravisCl:
 [![Build Status](https://travis-ci.org/7kaza/se_hello_printer_app.svg?branch=master)](https://travis-ci.org/7kaza/se_hello_printer_app)
 StatusCake:
-[![Uptime Button](https://www.statuscake.com)](https://app.statuscake.com/button/index.php?Track=Nk5fztn1S7&Days=1&Design=1)
+[![Uptime Button](https://www.statuscake.com)](https://app.statuscake.com/UptimeStatus.php?tid=5507337)
 
 
 - Instalacja python virtualenv i virtualenvwrapper:
