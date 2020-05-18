@@ -3,29 +3,18 @@ pipeline {
     stages {
         stage('Deps') {
             steps {
-	            sh 'make deps'
-                }
+                    sh 'make deps'
+                  }
         }
         stage('Linter') {
             steps {
-              sh 'make lint'
-                }
+	                  sh 'make lint'
+        	        }
         }
-        stage("Test") {
+        stage('Test') {
             steps {
-               sh 'make test_xunit || true'
-               unit thresholds: [
-                    skipped(failureThreshold: '0'),
-                    failed(failureThreshold: '1')
-                    ],
-                    tools: [
-                        JUnit(deleteOutputFiles: true,
-                               failIfNotNew: true,
-                               pattern: 'test_results.xml',
-                               skipNoTestFiles: false,
-                               stopProcessingIfError: true)
-                    ]
-               }
-          }
-    }    
+	                  sh 'make test'
+        	        }
+        }
+    }
 }
