@@ -8,7 +8,13 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 TravisCl:
 [![Build Status](https://travis-ci.org/7kaza/se_hello_printer_app.svg?branch=master)](https://travis-ci.org/7kaza/se_hello_printer_app)
 StatusCake:
-[![Uptime Button](https://www.statuscake.com)](https://app.statuscake.com/button/index.php?Track=Nk5fztn1S7&Days=1&Design=2)
+[![Uptime Button](https://www.statuscake.com)](https:///button/index.php?Track=Nk5fztn1S7&Days=1&Design=1)
+
+- Instalacja python virtualenv i virtualenvwrapper:
+```
+$ sudo pip install virtualenv
+$ sudo pip install virtualenvwrapper
+```
 
 
 - W projekcie wykorzystamy virtual environment, dla utworzenia hermetycznego środowisko dla aplikacji:
@@ -159,7 +165,7 @@ $ make test
         - URL: url Twojej aplikacji
         - Nazwa: dowolna
         - Contact Group.
- 
+
  - Test coverage
      Dodaj pytest-cov, plugin do pytest, do analizy pokrycia testami kodu, do test_requirements.txt:  
      ```
