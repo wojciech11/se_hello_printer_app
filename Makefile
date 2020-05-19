@@ -4,7 +4,7 @@ DOCKER_IMG_NAME=$(SERVICE_NAME)
 
 
 USERNAME=7kaza
-TAG=$(USERNAME)/hello_world_printer
+TAG=$(USERNAME)/hello-world-printer
 
 deps:
 	pip install -r requirements.txt; \
@@ -24,18 +24,18 @@ docker_build:
 
 docker_run: docker_build
 		docker run \
-			--name hello_world_printer-dev \
+			--name hello-world-printer-dev \
 			-p 5000:5000 \
-			-d hello_world_printer
+			-d hello-world-printer
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
-	docker tag hello_world_printer $(TAG); \
+	docker tag hello-world-printer $(TAG); \
 	docker push $(TAG); \
 	docker logout;
 
 docker_stop:
-	docker stop hello_world_printer-dev
+	docker stop hello-world-printer-dev
 
 test_cov:
 	PYTHONPATH=. py.test --verbose -s --cov=.

@@ -185,6 +185,35 @@ $ make test
       ```   
       Dodaj do .gitignore, aby git (git status) ignorował pliki: test_results.xml, coverage.xml i .coverage.
 
-## Ubuntu
+## Ubuntu - DOCKER
 
 - Instalacja dockera: [dockerce howto](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
+- Przetestuj, że możesz wrzucić swój Docker Image do docker huba:
+```
+$ export DOCKER_PASSWORD=TWOJE_HASLO
+$ make docker_push
+```
+# zweryfikuj, że docker jest uruchomiony  
+```
+$ docker ps -a
+```
+Docker zazwyczaj nie restartujemy, kasujemy i uruchamiamy na nowo:
+```
+$ docker stop hello-world-printer-dev
+$ docker rm hello-world-printer-dev  
+$ make docker_run
+```
+# możemy uruchomić basha w naszym dockerze image
+```
+ $ docker run -it hello-world-printer /bin/bash
+```
+# uruchamiamy bash-a w działającym dockerze z naszą aplikacją:
+```
+ $ docker exec -it hello-world-printer-dev /bin/bash
+ ```
+ komendy do zatrzymania i uruchomienia ponownie dockera:  
+ ```
+ $ docker stop hello-world-printer-dev
+ $ docker start hello-world-printer-dev
+ ```
