@@ -20,7 +20,7 @@ run:
 	PYTHONPATH=. FLASK_APP=hello_world flask run
 
 docker_build:
-	docker build  -t helo_world_printer .
+	docker build  -t helo-world-printer .
 
 docker_run: docker_build
 		docker run \
