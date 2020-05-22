@@ -5,11 +5,10 @@ stages:
 test:
   image: "python: 3.6"
   stage: test
-  install:
-  - make deps
   script:
+  - make deps
   - make test
-  
+
 docker:
    image: docker:stable
    services:
