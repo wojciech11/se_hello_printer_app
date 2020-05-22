@@ -7,7 +7,7 @@ test:
   stage: test
   script:
   - make deps
-  - make test
+  - PYTHONPATH=. py.test  --verbose -s
 docker:
    image: docker:stable
    services:
