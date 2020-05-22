@@ -3,17 +3,18 @@ stages:
   - docker_build
 
 test:
-  image: "python:2.7"
+  image: "python: 3.6"
   stage: test
+  install:
+  - make deps
   script:
-  - pip install -r requirements.txt
-  - pip install -r test_requirements.txt
-  - PYTHONPATH=. py.test  --verbose -s
-
+  - make test
+  
 docker:
    image: docker:stable
    services:
-   - docker:dind   
+   - docker:dind
    stage: docker_build
    script:
-     - docker build -t myapp .
+   - apk add --update make
+   - make docker_build
