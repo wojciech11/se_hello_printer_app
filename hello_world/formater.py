@@ -3,6 +3,7 @@ PLAIN_UP = "plain_uppercase"
 PLAIN_LO = "plain_lowercase"
 JSON = "json"
 
+
 SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON]
 
 
