@@ -9,7 +9,7 @@ Moga to byc zarowno testy manualne, jak i zaautomatyzowane
 Wykorzystywane na kazdym etapie rozwoju oprogramowania
 
 Przyklad uzycia w aplikacji:
-sprawdzenie czy nasza aplikacja po uruchomieniu wyswietli w konsoli basha
+sprawdzenie czy nasza aplikacja po uruchomieniu wyswietli w konsoli bash
  "Karolina Hello World! "
 
  2. Selenium Webdriver
