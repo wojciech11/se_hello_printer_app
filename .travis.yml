@@ -1,6 +1,17 @@
 language:  python
 services:
   - docker
+# blocklist
+branches:
+  except:
+  - html
+  - new_html
+
+# safelist
+branches:
+  only:
+  - master
+  - add_xml_output 
 
 python:
   - "3.6"
