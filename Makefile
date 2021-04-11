@@ -25,3 +25,12 @@ docker_run:
 docker_restart:
 	docker stop hello-world-printer-dev
 	docker start hello-world-printer-dev
+
+USERNAME:katarzynamyrcik
+TAG=$(USERNAME)/hello-world-printer
+
+docker_push: docker_build
+		@docker login --username $(USERNAME)  --password $${DOCKER_PASSWORD}; \
+		docker tag hello-world-printer $(TAG); \
+		docker push $(TAG); \
+		docker logout;
