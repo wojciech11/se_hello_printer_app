@@ -1,5 +1,9 @@
 language: python
+services:
+        -docker
 install:
         - make deps
 script:
         - make test
+after_succes:
+        - make docker_build
