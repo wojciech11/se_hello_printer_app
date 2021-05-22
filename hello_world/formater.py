@@ -29,7 +29,7 @@ def format_to_json(msg, imie):
     return json.dumps(d)
 #    return ('{ "imie":"' + imie + '", "mgs":"'+
 #            msg + '"}')
-
+#
 
 def format_to_xml(msg, imie):
     return ("<greetings><name>" + imie + "</name><msg>" + msg + "</msg></greetings>")# noqa

@@ -20,7 +20,7 @@ class FlaskrTestCase(unittest.TestCase):
 #        self.assertEqual(b'{test_data["msg"], y:["msg"]}', rv.data)
 #        self.assertEqual(b'{test_data["imie"], y:["imie"]}', rv.data)
 #        self.assertEqual(b'{ "imie":"Katarzyna", "mgs":"Hello World!"}', rv.data) # noqa
-#       test ktory sprawdza ilosc pol
+#       test ktory sprawdza ilosc pol.
 
     def test_msg_with_output(self):
         rv = self.app.get('/?output=xml')
