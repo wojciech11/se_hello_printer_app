@@ -1,9 +1,15 @@
 language: python
+env:
+  DOCKER_PASSWORD:
+    - secure: "KFcBlPpiv9YffvHpo9R2eQ1wSk7RDwrH1VvdLz3SROr9VLGSmDXT/l41RS+a/6RzaDQZsg0wslCjjhpa/7llZkfdRHhH1Uu1W2rrNeGv2najOgwu0GT0aHMpBRCu50HrNuhSs32kCiEw9GZraoCesicT8Nt+ZCHl9BOZeJUGKtcEPJ2sUFAOwQxhPxsdl3Xa3nQBrEWZCEhGMb8S7OKuMRAcd3dfY26M/jqKAg8EaqW3C684oWQV1z1nEmHbrGSvOedEcGYLXsMDzvUJsYKpXTtmv2v1MbvNSDFsqHBtD9cYcIHG0madIudLoKaFhKN78Bik+0P4RMPr8tPTfwqltq4QL/27eVjoD15sRvHvVCW/wAcu163JRlGh1Lw+rEoiyDp0bzD75/+DbslZTB8ZpQdIsYce3LEQwiFs2sudIut/o7aJuGRvVKZSNwSAqFiYVshsvRaytWlBWuE3pIhLoQQWA809ASplEt0je0aNG8VGrSDcZ21WAlCz4mL42PsWtANzYIcq2VI7yW15ngjApI24kaYcqw6LCuUieKs1/7rT6gObGBdczmXl9qYOK5xgZHgyO2Yf3rRBuUU2DOaB/TMvVcmkIxkhYgA+sub9c7tiTXtiQReXr4dyjhG9rEzdH3PwSZgjnDVf2uYRNoS6U5TT7Auoi6594eSMELuv/bc="
 services:
         -docker
 install:
         - make deps
 script:
         - make test
-after_succes:
+        - make lint
         - make docker_build
+        - make docker_push
+#after_succes:
+#        - make docker_build
