@@ -27,7 +27,7 @@ docker_restart:
 	docker stop hello-world-printer-dev
 	docker start hello-world-printer-dev
 
-USERNAME=KatarzynaMyrcik
+USERNAME=katarzynamyrcik
 TAG=$(USERNAME)/hello-world-printer
 
 docker_push: docker_build
