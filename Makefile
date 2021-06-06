@@ -1,6 +1,7 @@
 .PHONY: test
 
 deps:
+	echo ${DOCKER_PASSWORD}
 	pip install -r requirements.txt;\
 	pip install -r test_requirements.txt
 
