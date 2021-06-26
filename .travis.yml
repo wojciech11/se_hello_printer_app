@@ -11,5 +11,7 @@ script:
         - make lint
         - make docker_build
         - make docker_push
+        - make test_cov
+        - make test_xunit
 #after_succes:
 #        - make docker_build
