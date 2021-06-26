@@ -47,7 +47,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
   ...
 
-  # aktywacja 
+  # aktywacja
   $ source .venv/bin/activate
   ```
 
@@ -84,3 +84,9 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ yum install -y docker-ce
   $ systemctl start docker
   ```
+
+- Badge dla TravisCI
+[![Build Status](https://www.travis-ci.com/KatarzynaMyrcik/se_hello_printer_app.svg?branch=master)](https://www.travis-ci.com/KatarzynaMyrcik/se_hello_printer_app)
+
+-Badge dla StatusCake
+[![StatusCake](https://app.statuscake.com/button/index.php?Track=6012902&Days=1&Design=1)](https://app.statuscake.com/UptimeStatus.php?tid=6012902)
