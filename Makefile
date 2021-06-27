@@ -13,7 +13,7 @@ test:
 
 run:
 	python main.py
-
+PYTHONPATH=. py.test -s --cov=. --cov-report xml \
 docker_build:
 	docker build -t hello-world-printer .
 
@@ -39,6 +39,4 @@ test_cov:
 		PYTHONPATH=. py.test --verbose -s --cov=.
 
 test_xunit:
-		PYTHONPATH=. py.test -s --cov=. --cov-report xml \
-			--cov-report term \
-			--junit-xml=test_results.xml
+		PYTHONPATH=. py.test -s --cov=. --cov-report xml --cov-report term --junit-xml=test_results.xml
