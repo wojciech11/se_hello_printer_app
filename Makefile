@@ -1,42 +1,38 @@
 .PHONY: test
 
 deps:
-#	echo ${DOCKER_PASSWORD}
-	pip install -r requirements.txt;\
+	pip install -r requirements.txt
 	pip install -r test_requirements.txt
-
-lint:
-	flake8 hello_world test
 
 test:
 	PYTHONPATH=. py.test --verbose -s
 
 run:
-	python main.py
-PYTHONPATH=. py.test -s --cov=. --cov-report xml \
+	python3 main.py
+
 docker_build:
 	docker build -t hello-world-printer .
 
-docker_run:
-	docker run \
-		--name hello-world-printer-dev \
-		-p 5000:5000 \
-		-d hello-world-printer
+test_cov:
+	PYTHONPATH=. py.test --verbose -s --cov=. --cov-report xml --cov-report term
 
-docker_restart:
-	docker stop hello-world-printer-dev
-	docker start hello-world-printer-dev
+test_xunit:
+	PYTHONPATH=. py.test -s --cov=. --cov-report xml --cov-report term --junit-xml=test_results.xml
 
-USERNAME=KatarzynaMyrcik
+USERNAME=bryg9
 TAG=$(USERNAME)/hello-world-printer
 
 docker_push: docker_build
-		docker login --username ${USERNAME}  --password ${DOCKER_PASSWORD}; #\
-#		docker tag hello-world-printer ${TAG}; \
-#		docker logout;
+	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
+	docker tag hello-world-printer $(TAG); \
+	docker push $(TAG); \
+	docker logout;
 
-test_cov:
-		PYTHONPATH=. py.test --verbose -s --cov=.
+docker_run: docker_build
+	docker run \
+	--name hello-world-printer-dev \
+	-p 5000:5000 \
+	-d hello-world-printer
 
-test_xunit:
-		PYTHONPATH=. py.test -s --cov=. --cov-report xml --cov-report term --junit-xml=test_results.xml
+lint:
+	flake8 hello_world test
