@@ -33,6 +33,7 @@ pipeline {
             cobertura autoUpdateHealth: false,
 	    autoUpdateStability: false,
 	    conditionalCoverageTargets: '70, 0, 0',
+      coberturaReportFile: 'coverage.xml',
 	    failUnhealthy: false,
 	    failUnstable: false,
 	    lineCoverageTargets: '80, 0, 0',
@@ -41,5 +42,5 @@ pipeline {
 	    onlyStable: false, sourceEncoding: 'ASCII',
 	    zoomCoverageChart: false
         }
-    } 
+    }
 }
