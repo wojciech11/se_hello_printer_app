@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-     
     - name: Install dependencies
       run: make deps
-
+    - name: Check liner
+      run: make lint
