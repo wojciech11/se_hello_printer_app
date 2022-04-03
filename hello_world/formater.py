@@ -38,6 +38,7 @@ def plain_text_upper_case(msg, imie):
 
 def plain_text_lower_case(msg, imie):
     return plain_text(msg.lower(), imie.lower())
-    
+
+
 def format_xml(msg, imie):
     return ('<hollo_word><imie>'+imie+'<imie/><msg>'+msg+'<msg/><hollo_word/>')
