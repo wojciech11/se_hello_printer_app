@@ -1,3 +1,5 @@
 **/*.pyc
 .cache
 .venv/
+.idea/misc.xml
+.idea/se_hello_printer_app.iml
