@@ -1,0 +1,14 @@
+name: Package Project
+on: [ push ]
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3
+        uses: actions/setup-python@v3
+      - name: Install deps
+        run: make deps
+      - name: Tests
+        run: make test
