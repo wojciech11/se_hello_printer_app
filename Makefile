@@ -9,3 +9,5 @@ test:
 		PYTHONPATH=. py.test --verbose -s
 run:
 		python main.py
+docker_build:
+		docker build -t hello-world-printer .
