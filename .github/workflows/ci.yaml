@@ -1,0 +1,21 @@
+name: Package Project
+
+# kiedy mam uruchomic automatyzacje
+on: [ push ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # pobierz kod
+      - uses: actions/checkout@v3
+      # moja aplikacja jest w Pythonie
+      - name: Set up Python 3
+        uses: actions/setup-python@v3
+      # instalacja wymaganych bibliotek
+      - name: Install deps
+        run: make deps
+      # testy!!!!!
+      - name: Tests
+        run: make test
