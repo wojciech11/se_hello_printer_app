@@ -20,4 +20,4 @@ jobs:
       - name: Tests
         run: make test
       - name: Linter
-        run: make linter
+        run: make lint
