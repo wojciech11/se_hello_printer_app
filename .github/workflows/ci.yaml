@@ -19,3 +19,5 @@ jobs:
       # testy!!!!!
       - name: Tests
         run: make test
+      - name: Linter
+        run: make liter
