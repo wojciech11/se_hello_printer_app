@@ -85,3 +85,16 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ systemctl start docker
   ```
 adding this line for commit gtest
+
+adding this line for commit gtest2
+adding this line for commit gtest3
+adding this line for commit gtest4
+adding this line for commit gtest5
+test7
+nowy test
+nowy commit
+
+new commit
+
+
+
