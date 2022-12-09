@@ -66,3 +66,4 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```bash
   # miejsce na twoje notatki
   ```
+kfbgjsdgf
